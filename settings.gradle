@@ -1,3 +1,4 @@
 rootProject.name = 'tester_project'
 include 'tester-intro'
+include 'tester-basic-tests'
 
