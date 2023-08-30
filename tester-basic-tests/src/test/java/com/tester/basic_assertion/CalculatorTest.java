@@ -23,6 +23,9 @@ class CalculatorTest {
     @Test
     void toSquare() {
         double result = calculator.toSquare(3, 2);
-        assertEquals(9, result);
+        double result2 = calculator.toSquare(-2, 3);
+        double delta = 0.1;
+        assertEquals(9, result, delta);
+        assertEquals(-8, result2, delta);
     }
 }
