@@ -12,13 +12,15 @@ public class ShapeApplication {
     private static final Random RANDOM = new Random();
 
     public static void main(String[] args) {
-        Shape[] shapes = new Shape[5];
+        Shape[] shapes = new Shape[RANDOM.nextInt(20) + 1];
         for (int i = 0; i < shapes.length; i++) {
             shapes[i] = drawShape();
         }
         for (Shape shape : shapes) {
             ShapeUtils.displayShapeInfo(shape);
         }
+        System.out.println();
+        System.out.println("Liczba wylosowanych figur: " + shapes.length);
     }
 
     public static Shape drawShape() {
