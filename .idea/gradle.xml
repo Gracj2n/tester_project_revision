@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/tester-basic-tests" />
             <option value="$PROJECT_DIR$/tester-collections" />
+            <option value="$PROJECT_DIR$/tester-collections-advanced" />
             <option value="$PROJECT_DIR$/tester-intro" />
           </set>
         </option>
