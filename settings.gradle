@@ -3,4 +3,5 @@ include 'tester-intro'
 include 'tester-basic-tests'
 include 'tester-collections'
 include 'tester-collections-advanced'
+include 'tester-stream'
 
