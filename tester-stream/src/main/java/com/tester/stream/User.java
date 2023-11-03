@@ -9,8 +9,12 @@ public class User {
     private String group;
 
     public User(String username, int age, int numberOfPosts, String group) {
+        if (age >= 0) {
+            this.age = age;
+        } else {
+            throw new IllegalArgumentException("Age cannot be under 0");
+        }
         this.username = username;
-        this.age = age;
         this.numberOfPosts = numberOfPosts;
         this.group = group;
     }
