@@ -32,4 +32,10 @@ class UserValidatorTest {
         assertTrue(userValidator.validateEmail(input));
     }
 
+    @ParameterizedTest
+    @CsvSource(value = {"abbcdegmail.com", "123123@gmail_com", "em@#ailexample3@emgi.pl"})
+    void shouldReturnFalseWhenEmailStringIsIncorrect(String input) {
+        assertFalse(userValidator.validateEmail(input));
+    }
+
 }
