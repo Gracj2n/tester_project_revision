@@ -4,4 +4,5 @@ include 'tester-basic-tests'
 include 'tester-collections'
 include 'tester-collections-advanced'
 include 'tester-stream'
+include 'tester-advanced-tests'
 
