@@ -18,13 +18,25 @@ class StringManipulatorTest {
     }
 
     @ParameterizedTest
+    @CsvFileSource(resources = "/stringWithLowerCase.csv", numLinesToSkip = 1)
+    void shouldReverseWithLoverCaseCSV(String input, String expected) {
+        assertEquals(expected, stringManipulator.reverseWithLoverCase(input));
+    }
+
+    @ParameterizedTest
     @CsvSource(value = {"test1, 5", "apczyfR23$4, 11", "bamitros, 8"})
     void shouldCalculateStringLengthWithoutSpaces(String input, int expected) {
         assertEquals(expected, stringManipulator.getStringLengthWithoutSpaces(input));
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"a,b,c,d,e,f,g,h : 9"})
+    @CsvFileSource(resources = "/stringLengthWithoutSpaces.csv", numLinesToSkip = 1)
+    void shouldCalculateStringLengthWithoutSpacesCSV(String input, int expected) {
+        assertEquals(expected, stringManipulator.getStringLengthWithoutSpaces(input));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {"a,b,c,d,e,f,g,h : 7"})
     void shouldCountNumberOfCommas(String input, int expected) {
         assertEquals(expected, stringManipulator.countNumberOfCommas(input));
     }
