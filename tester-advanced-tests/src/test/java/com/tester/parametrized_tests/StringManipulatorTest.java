@@ -2,14 +2,29 @@ package com.tester.parametrized_tests;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringManipulatorTest {
 
     StringManipulator stringManipulator = new StringManipulator();
+
+    private static Stream<Arguments> provideStringsForTestingLength() {
+        return Stream.of(
+                Arguments.of("example string", 13),
+                Arguments.of("", 0),
+                Arguments.of("   ", 0),
+                Arguments.of("e x a m p l e", 7),
+                Arguments.of("    example", 7),
+                Arguments.of("ex , a, mp, le", 10)
+        );
+    }
 
     @ParameterizedTest
     @CsvSource(value = {"STATUS,sutats", "APczYk,kyzcpa", "null,llun"})
@@ -39,5 +54,11 @@ class StringManipulatorTest {
     @CsvSource(value = {"a,b,c,d,e,f,g,h : 7"})
     void shouldCountNumberOfCommas(String input, int expected) {
         assertEquals(expected, stringManipulator.countNumberOfCommas(input));
+    }
+
+    @ParameterizedTest
+    @MethodSource(value = "provideStringsForTestingLength")
+    void shouldReturnStringsLengthUsingMethodAsTestValues(String input, int expected) {
+        assertEquals(expected, stringManipulator.getStringLengthWithoutSpaces(input));
     }
 }
