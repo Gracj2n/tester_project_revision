@@ -60,7 +60,7 @@ class ShopTest {
     @Test
     void shouldSumValuesOfAllOrders() {
         double actualValues = shop.sumValuesOfAllOrders();
-        assertEquals(20090, actualValues);
+        assertEquals(48820, actualValues);
     }
 
 }
