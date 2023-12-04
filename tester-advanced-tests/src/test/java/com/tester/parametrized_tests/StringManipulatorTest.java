@@ -39,7 +39,7 @@ class StringManipulatorTest {
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"test1, 5", "apczyfR23$4, 11", "bamitros, 8"})
+    @CsvSource(value = {"test1, 5", "apczyf, 6", "bamitros, 8"})
     void shouldCalculateStringLengthWithoutSpaces(String input, int expected) {
         assertEquals(expected, stringManipulator.getStringLengthWithoutSpaces(input));
     }
@@ -48,12 +48,6 @@ class StringManipulatorTest {
     @CsvFileSource(resources = "/stringLengthWithoutSpaces.csv", numLinesToSkip = 1)
     void shouldCalculateStringLengthWithoutSpacesCSV(String input, int expected) {
         assertEquals(expected, stringManipulator.getStringLengthWithoutSpaces(input));
-    }
-
-    @ParameterizedTest
-    @CsvSource(value = {"a,b,c,d,e,f,g,h : 7"})
-    void shouldCountNumberOfCommas(String input, int expected) {
-        assertEquals(expected, stringManipulator.countNumberOfCommas(input));
     }
 
     @ParameterizedTest

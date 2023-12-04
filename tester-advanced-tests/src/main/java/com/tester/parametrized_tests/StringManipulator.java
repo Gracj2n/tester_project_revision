@@ -10,9 +10,4 @@ public class StringManipulator {
         String value = textToCheckLength.replaceAll(" ", "");
         return value.length();
     }
-
-    public int countNumberOfCommas(String textWithCommas) {
-        int count = textWithCommas.length() - textWithCommas.replace(",", "").length();
-        return count;
-    }
 }
