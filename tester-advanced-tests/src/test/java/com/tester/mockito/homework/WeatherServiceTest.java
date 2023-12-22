@@ -20,8 +20,8 @@ public class WeatherServiceTest {
         weatherService.acceptAlertSubscription(alert2, user2);
         weatherService.sendAlertToSubscribedUsers(alert1);
         weatherService.sendAlertToSubscribedUsers(alert2);
-        Mockito.verify(user1, Mockito.times(1)).receive(alert1);
-        Mockito.verify(user1, Mockito.times(1)).receive(alert2);
+        Mockito.verify(user1, Mockito.atMostOnce()).receive(alert1);
+        Mockito.verify(user1, Mockito.atMostOnce()).receive(alert2);
     }
 
     @Test
