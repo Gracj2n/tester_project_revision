@@ -27,6 +27,14 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/tester-spring-basic" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/tester-spring-basic" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/tester-spring-basics" />
         <option name="modules">
           <set>
