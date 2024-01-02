@@ -1,6 +1,6 @@
-package com.tester.spring.dependency_injection.homework;
+package com.tester.spring.basic.dependency_injection.homework;
 
-public class FedexDeliveryService implements DeliveryService{
+public class FedexDeliveryService implements DeliveryService {
     @Override
     public boolean deliverPackage(String address, double weight) {
         if (weight > 15) {

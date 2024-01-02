@@ -1,4 +1,4 @@
-package com.tester.spring.dependency_injection;
+package com.tester.spring.basic.dependency_injection;
 
 public class SimpleApplicationRunner {
 
