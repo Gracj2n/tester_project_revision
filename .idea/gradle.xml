@@ -19,20 +19,6 @@
           </set>
         </option>
       </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/tester-spring-basic" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/tester-spring-basic" />
-            <option value="$PROJECT_DIR$/tester-spring-basic/tester-advanced-tests" />
-            <option value="$PROJECT_DIR$/tester-spring-basic/tester-basic-tests" />
-            <option value="$PROJECT_DIR$/tester-spring-basic/tester-collections" />
-            <option value="$PROJECT_DIR$/tester-spring-basic/tester-collections-advanced" />
-            <option value="$PROJECT_DIR$/tester-spring-basic/tester-intro" />
-            <option value="$PROJECT_DIR$/tester-spring-basic/tester-stream" />
-          </set>
-        </option>
-      </GradleProjectSettings>
     </option>
   </component>
 </project>
