@@ -12,7 +12,7 @@ class SimpleApplicationTest {
     @Test
     void shouldReturnCorrectMessage() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.tester.spring.basic");
-        SkypeMessageService bean = context.getBean(SkypeMessageService.class);
+        TextMessageService.SkypeMessageService bean = context.getBean(TextMessageService.SkypeMessageService.class);
         String message = bean.send("Test message", "Test receiver");
         Assertions.assertNotNull(message);
     }
@@ -20,7 +20,7 @@ class SimpleApplicationTest {
     @Test
     void shouldProcessMessage() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.tester.spring.basic");
-        SimpleApplication bean = context.getBean(SimpleApplication.class);
+        TextMessageService.SimpleApplication bean = context.getBean(TextMessageService.SimpleApplication.class);
         String message = bean.processMessage("Test", "Any receiver");
         Assertions.assertEquals("Sending [Test] to: Any receiver using Skype", message);
     }
