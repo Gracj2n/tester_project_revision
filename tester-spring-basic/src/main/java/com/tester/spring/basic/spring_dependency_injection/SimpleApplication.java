@@ -1,25 +1,28 @@
 package com.tester.spring.basic.spring_dependency_injection;
 
+import com.tester.spring.basic.dependency_injection.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class SimpleApplication {
 
-    private MessageService messageService;
-@Autowired
-    public SimpleApplication(MessageService messageService) {
+    public SkypeMessageService messageService;
+
+    @Autowired
+    public void setMessageService(SkypeMessageService messageService) {
         this.messageService = messageService;
     }
 
     public String processMessage(String message, String receiver) {
         if (checkReceiver(receiver)) {
             return this.messageService.send(message, receiver);
+        } else {
+            return null;
         }
-        return null;
     }
 
-    private boolean checkReceiver(String receiver) {
+    public boolean checkReceiver(String receiver) {
         return receiver != null && !receiver.isEmpty();
     }
 }
