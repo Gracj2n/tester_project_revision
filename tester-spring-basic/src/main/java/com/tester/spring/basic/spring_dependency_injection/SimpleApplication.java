@@ -7,7 +7,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class SimpleApplication {
 
-    @Qualifier(value = "skypeMessageService")
+    //@Resource(name = "skypeMessageService")
+    //@Qualifier(value = "skypeMessageService")
+    //@Autowired
     private MessageService messageService;
 
     public SimpleApplication(MessageService messageService) {
