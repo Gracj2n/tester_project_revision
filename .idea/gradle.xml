@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/tester-collections" />
             <option value="$PROJECT_DIR$/tester-collections-advanced" />
             <option value="$PROJECT_DIR$/tester-intro" />
+            <option value="$PROJECT_DIR$/tester-rest-api" />
             <option value="$PROJECT_DIR$/tester-spring-basic" />
             <option value="$PROJECT_DIR$/tester-stream" />
           </set>

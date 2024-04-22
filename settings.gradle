@@ -6,4 +6,5 @@ include 'tester-collections-advanced'
 include 'tester-stream'
 include 'tester-advanced-tests'
 include 'tester-spring-basic'
+include 'tester-rest-api'
 
