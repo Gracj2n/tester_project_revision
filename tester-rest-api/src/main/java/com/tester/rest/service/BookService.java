@@ -19,9 +19,7 @@ public class BookService {
         books.add(book);
     }
 
-    public void removeBook(BookDto book) {
-        books.remove(book);
-    }
+    public void removeBook(BookDto book) { books.remove(book); }
 
 
 }
