@@ -1,4 +1,4 @@
-package com.tester.rest.controller;
+package com.tester.rest.domain;
 
 import java.util.Objects;
 
