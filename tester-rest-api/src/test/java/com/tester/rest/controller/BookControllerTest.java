@@ -29,4 +29,17 @@ class BookControllerTest {
         assertThat(result).hasSize(2);
     }
 
+    @Test
+    void shouldAddBook() {
+        //given
+        BookController bookController = Mockito.mock(BookController.class);
+        BookDto book = new BookDto("Title 3", "Author 3");
+
+        //when
+        bookController.addBooks(book);
+
+        //then
+        Mockito.verify(bookController, Mockito.atMostOnce()).addBooks(book);
+    }
+
 }
